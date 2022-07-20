@@ -16,7 +16,11 @@
 /* ======= DARK ======= */
 
 body.dark {
-  --bg-color: #000;
+  background-color: black;
+}
+
+body.dark nav {
+  background-color: var(--bg-color);
 }
 
 body.dark h1 {

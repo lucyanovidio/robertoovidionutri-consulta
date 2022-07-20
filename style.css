@@ -84,13 +84,13 @@ nav a {
 
   width: 60%;
   max-width: 8rem;
-  padding-block: .8rem;
+  padding-block: 0.8rem;
   /* padding: .8rem 1.6rem; */
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
 
   text-transform: uppercase;
   text-decoration: none;
@@ -144,6 +144,22 @@ main .col-b {
   text-align: left;
 }
 
+main .col-b header {
+  border-bottom: 1px solid rgb(88, 88, 88);
+  margin-bottom: 2rem;
+}
+
+main .col-b header h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+}
+
+main .col-b header p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
 .contact-button {
   width: 100%;
   margin-top: 3.5rem;
@@ -160,7 +176,7 @@ main .col-b {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .8rem;
+  gap: 0.8rem;
 
   transition: 300ms;
 }
@@ -260,14 +276,14 @@ footer p:hover {
   margin-bottom: 1.5rem;
 }
 
-.themes #light-sun{
+.themes #light-sun {
   display: none;
 
   width: 80%;
   height: 80%;
 
   background-color: black;
-  padding: .7rem;
+  padding: 0.7rem;
   border-radius: 50%;
 }
 
@@ -276,7 +292,7 @@ footer p:hover {
   height: 80%;
 
   background-color: white;
-  padding: .7rem;
+  padding: 0.7rem;
   border-radius: 50%;
 
   transition: 400ms;
@@ -343,7 +359,7 @@ body.dark .themes #light-sun:hover {
   main #first-text .col-b .wrapper {
     display: block;
   }
-  
+
   footer .wrapper {
     display: flex;
     align-items: center;

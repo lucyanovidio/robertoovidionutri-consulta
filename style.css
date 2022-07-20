@@ -1,0 +1,342 @@
+:root {
+  --primary-color: #60e8dc;
+  --primary-hover: #2eb6aa;
+  --text-color: #000;
+  --bg-color: #f5f5f5;
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======= DARK ======= */
+
+body.dark {
+  --bg-color: #000;
+}
+
+body.dark h1 {
+  --text-color: white;
+}
+
+body.dark footer {
+  background-color: var(--primary-hover);
+}
+
+/* ======= ======= */
+
+body {
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--bg-color);
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 50rem;
+
+  margin: 0 auto;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+nav {
+  width: 100%;
+  height: 7.2rem;
+
+  position: fixed;
+  z-index: 100;
+
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+}
+
+nav .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  color: var(--text-color);
+}
+
+nav a {
+  background-color: var(--primary-color);
+
+  padding: .8rem 1.6rem;
+  /* border-radius: 1.2rem; */
+
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1.4rem;
+
+  transition: 400ms;
+}
+
+nav a svg {
+  width: 30%;
+}
+
+body nav a:hover {
+  background-color: #000;
+  --text-color: white;
+  padding-inline: 3rem;
+}
+
+body nav a:hover svg path + path {
+  fill: white;
+}
+
+main h1 {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: var(--text-color);
+}
+
+main {
+  padding-top: 7.2rem;
+}
+
+main img {
+  width: 100%;
+  border-radius: 1.6rem 1.6rem 0 0;
+}
+
+main .col-b {
+  padding-block: 4rem;
+
+  background-color: var(--primary-hover);
+  border-radius: 0 0 1.6rem 1.6rem;
+
+  text-align: left;
+}
+
+.contact-button {
+  width: 100%;
+  margin-top: 3.5rem;
+
+  background-color: white;
+  border-radius: 1.2rem;
+  padding: 1.6rem 2.5rem;
+
+  text-decoration: none;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+
+  transition: 300ms;
+}
+
+.contact-button path {
+  fill: black;
+}
+
+.contact-button:hover {
+  background-color: #000;
+  --text-color: white;
+}
+
+.contact-button:hover path {
+  fill: white;
+}
+
+/* #middle-text {
+  margin-top: 6rem;
+  padding-top: 5rem;
+
+  background-color: white;
+
+  text-align: left;
+}
+
+#middle-text .contact-button {
+  background-color: var(--primary-hover);
+}
+
+#middle-text .contact-button:hover {
+  background-color: black;
+} */
+
+footer {
+  width: 100%;
+  height: fit-content;
+
+  margin-top: 9rem;
+  padding-block: 5rem;
+
+  background-color: black;
+}
+
+footer h3 {
+  color: white;
+}
+
+footer .social-links ul {
+  margin-block: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+footer a img {
+  width: 3rem;
+}
+
+footer p {
+  font-size: 1.4rem;
+  color: white;
+  opacity: 0.5;
+
+  transition: 400ms;
+}
+
+footer p a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+footer p:hover {
+  opacity: 1;
+}
+
+.themes {
+  position: fixed;
+  bottom: 1rem;
+  right: 2.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  width: 5rem;
+  height: 5rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.themes #light-sun{
+  display: none;
+
+  width: 80%;
+  height: 80%;
+
+  background-color: black;
+  padding: .7rem;
+  border-radius: 50%;
+}
+
+.themes #dark-moon {
+  width: 80%;
+  height: 80%;
+
+  background-color: white;
+  padding: .7rem;
+  border-radius: 50%;
+
+  transition: 400ms;
+}
+
+.themes #dark-moon:hover {
+  width: 90%;
+  height: 90%;
+
+  cursor: pointer;
+}
+
+body.dark #dark-moon {
+  display: none;
+}
+
+body.dark .themes #light-sun {
+  display: initial;
+
+  transition: 400ms;
+}
+
+body.dark .themes #light-sun:hover {
+  width: 90%;
+  height: 90%;
+
+  cursor: pointer;
+}
+
+/* ======= RESPONSIVO ======== */
+
+@media (min-width: 1024px) {
+  .wrapper {
+    width: 80%;
+    max-width: 100rem;
+  }
+
+  main #first-text .wrapper {
+    display: flex;
+
+    position: relative;
+  }
+
+  main #first-text .col-a {
+    width: 50%;
+    margin: 0;
+
+    position: absolute;
+    top: 3rem;
+    z-index: 50;
+  }
+
+  main #first-text .col-a img {
+    border-radius: 1.6rem;
+  }
+
+  main #first-text .col-b {
+    width: 100%;
+    margin-left: 30rem;
+    padding-left: 20rem;
+    border-radius: 1.6rem;
+  }
+
+  main #first-text .col-b .wrapper {
+    display: block;
+  }
+  
+  footer .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

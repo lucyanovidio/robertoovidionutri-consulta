@@ -8,8 +8,8 @@ function lightTheme() {
 
 ScrollReveal({
   origin: 'bottom',
-  distance: '50px',
-  duration: 700
+  distance: '40px',
+  duration: 600
 }).reveal(
   `main header,
   #first-text,

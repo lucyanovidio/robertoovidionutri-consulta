@@ -158,6 +158,7 @@ main .col-b header p {
   font-family: 'Oswald', sans-serif;
   font-size: 2rem;
   margin-bottom: 2rem;
+  margin-top: .6rem;
 }
 
 .contact-button {

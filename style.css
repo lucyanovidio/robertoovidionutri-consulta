@@ -1,11 +1,4 @@
-:root {
-  --primary-color: #60e8dc;
-  --primary-hover: #2eb6aa;
-  --text-color: #000;
-  --bg-color: #f5f5f5;
-
-  font-size: 62.5%;
-}
+/* ======= GLOBAL ======= */
 
 * {
   margin: 0;
@@ -13,25 +6,14 @@
   box-sizing: border-box;
 }
 
-/* ======= DARK ======= */
+:root {
+  --primary-color: #60e8dc;
+  --primary-hover: #2eb6aa;
+  --headline: #000;
+  --bg-color: #f5f5f5;
 
-body.dark {
-  background-color: black;
+  font-size: 62.5%;
 }
-
-body.dark nav {
-  background-color: var(--bg-color);
-}
-
-body.dark h1 {
-  --text-color: white;
-}
-
-body.dark footer {
-  background-color: var(--primary-hover);
-}
-
-/* ======= ======= */
 
 body {
   width: 100%;
@@ -41,6 +23,13 @@ body {
 
   font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
+
+  transition: 500ms;
+}
+
+body.dark {
+  --headline: #ffffff;
+  --bg-color: #1b1b1b;
 }
 
 .wrapper {
@@ -54,6 +43,8 @@ p {
   font-size: 1.6rem;
 }
 
+/* ======= NAV ======= */
+
 nav {
   width: 100%;
   height: 7.2rem;
@@ -61,10 +52,15 @@ nav {
   position: fixed;
   z-index: 100;
 
-  background-color: white;
+  background: white;
 
   display: flex;
   align-items: center;
+}
+
+body.dark nav {
+  background: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(2rem);
 }
 
 nav .wrapper {
@@ -76,7 +72,7 @@ nav .wrapper {
 h3 {
   font-family: 'Oswald', sans-serif;
   font-size: 2.8rem;
-  color: var(--text-color);
+  color: var(--headline);
 }
 
 nav a {
@@ -85,7 +81,6 @@ nav a {
   width: 60%;
   max-width: 8rem;
   padding-block: 0.8rem;
-  /* padding: .8rem 1.6rem; */
 
   display: flex;
   align-items: center;
@@ -94,7 +89,7 @@ nav a {
 
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--text-color);
+  color: #000;
   font-weight: bold;
   font-size: 1.4rem;
 
@@ -107,11 +102,17 @@ nav a svg {
 
 body nav a:hover {
   background-color: #000;
-  --text-color: white;
+  color: #fff;
 }
 
 body nav a:hover svg path + path {
-  fill: white;
+  fill: #fff;
+}
+
+/* ======= MAIN ======= */
+
+main {
+  padding-top: 7.2rem;
 }
 
 main h1 {
@@ -123,11 +124,7 @@ main h1 {
   font-weight: normal;
   text-transform: uppercase;
   font-size: 4rem;
-  color: var(--text-color);
-}
-
-main {
-  padding-top: 7.2rem;
+  color: var(--headline);
 }
 
 main img {
@@ -158,7 +155,6 @@ main .col-b header p {
   font-family: 'Oswald', sans-serif;
   font-size: 2rem;
   margin-bottom: 2rem;
-  margin-top: .8rem;
 }
 
 .contact-button {
@@ -170,7 +166,7 @@ main .col-b header p {
   padding: 1.6rem 2.5rem;
 
   text-decoration: none;
-  color: var(--text-color);
+  color: #000;
   text-transform: uppercase;
   font-weight: bold;
 
@@ -192,29 +188,14 @@ main .col-b header p {
 
 .contact-button:hover {
   background-color: #000;
-  --text-color: white;
+  color: #fff;
 }
 
 .contact-button:hover path {
   fill: white;
 }
 
-/* #middle-text {
-  margin-top: 6rem;
-  padding-top: 5rem;
-
-  background-color: white;
-
-  text-align: left;
-}
-
-#middle-text .contact-button {
-  background-color: var(--primary-hover);
-}
-
-#middle-text .contact-button:hover {
-  background-color: black;
-} */
+/* ======= FOOTER ======= */
 
 footer {
   width: 100%;
@@ -260,6 +241,8 @@ footer p a {
 footer p:hover {
   opacity: 1;
 }
+
+/* ======= THEMES BUTTON ======= */
 
 .themes {
   position: fixed;

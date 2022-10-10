@@ -59,8 +59,7 @@ nav {
 }
 
 body.dark nav {
-  background: rgba(0, 0, 0, .5);
-  backdrop-filter: blur(2rem);
+  background: rgb(0, 0, 0);
 }
 
 nav .wrapper {
